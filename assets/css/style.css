@@ -1,60 +1,77 @@
 body {
-  background-color: #102142;
+  background-color: #ffff;
+  font-family: 'Montserrat', sans-serif;
 }
 
-h1.small-heading {
-  color: #61f7d4;
-  margin-top: 11rem;
-  font-size: 1rem;
+.container {
+  display: grid;
+  grid-template-areas:
+      "header header "
+      "nav nav "
+      "main main "
+      "section section " ;
+  gap: 20px;
+  /* line-height: 130%; */
+  color: #000000;
+}
+
+main {
+  grid-area: main;
+  padding: 11rem;
+  text-align: center;
+}
+
+.compact {
+  line-height: 200%;
 }
 
 h1.big-heading {
-  color: #BBE1FA;
-  font-size: 5.4rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5.6rem;
 }
 
 h3.big-heading {
-  color: #7990a0;
-  font-size: 3.7rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
 }
+
 h3.small-para {
-  color: #7990a0;
   font-size: 0.99rem;
-  width: 37rem;
-}
-
-div.container {
-  line-height: 150%;
-  margin-left: 24rem;
-  font-family: Geneva;
-}
-
-span {
-  color: #61f7d4;
+  width: 40rem;
 }
 
 /* Navigation menu*/
-
-.nav-bar {
-  list-style: none;
-  margin-left: 44rem;
-  font-size: small;
-  margin-top: 3rem;
+nav {
+  grid-area: nav;
+  font-weight: bold;
+  position: fixed;
+  width: 600px;
+  height: 40px;
+  /* left: 50%; */
+  top: 1%;
+  margin-left: 32%;
 }
 
 .nav-bar li {
   display: inline;
-  margin-left: 1.5rem;
+  padding: 1.5rem;
 }
 
 .nav-bar a:hover {
-  color: #61f7d4;
+  color: #0b19e0;
 }
 
 a {
-  color: #7990a0;
+  color: #000000;
   text-decoration: none;
   transition: all 0.3s ease-in-out 0s;
+}
+
+/* About me section */
+div.Aboutme{
+  display: flex;
+  justify-content: center;
+  grid-area: section;
+  background-color: #000000;
+  color: #ffff;
+  font-size: xx-large;
+  font-family: 'Montserrat', sans-serif;
 }
